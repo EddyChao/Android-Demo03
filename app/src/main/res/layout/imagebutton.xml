@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/foot_txt_gray"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/imageButton"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/huang"
+        android:text="按钮1" />
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="239dp"
+        android:layout_marginTop="10dp" />
+
+
+    <TextView
+        android:id="@+id/imgaetext"
+        android:layout_width="126dp"
+        android:gravity="center"
+        android:layout_height="29dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:layout_marginBottom="35dp"
+        android:background="@color/green"
+        android:gravity="center"
+        android:hint="请输入" />
+
+
+</LinearLayout>

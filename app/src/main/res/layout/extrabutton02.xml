@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/huang"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/exButton01"
+        android:layout_width="133dp"
+        android:layout_height="155dp"
+        android:background="@color/read"
+        android:text="按钮1" />
+
+    <Button
+        android:id="@+id/exButton02"
+        android:layout_width="128dp"
+        android:layout_height="155dp"
+        android:background="@color/qianlan"
+        android:text="按钮2" />
+
+    <Button
+        android:id="@+id/exButton03"
+        android:layout_width="116dp"
+        android:layout_height="155dp"
+
+        android:background="@color/lan"
+        android:text="按钮3" />
+
+</LinearLayout>

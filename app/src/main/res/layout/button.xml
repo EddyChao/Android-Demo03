@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/fen"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/MyButton01"
+        android:layout_width="130dp"
+        android:layout_height="182dp"
+        android:background="@color/qianlan"
+        android:text="图片"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="483dp" />
+
+    <Button
+        android:id="@+id/MyButton02"
+        android:layout_width="110dp"
+        android:layout_height="182dp"
+        android:background="@color/huang"
+        android:text="百度"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <Button
+        android:id="@+id/MyButton03"
+        android:layout_width="143dp"
+        android:layout_height="182dp"
+        android:background="@color/zi"
+        android:text="列表"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="228dp" />
+
+
+
+</LinearLayout>

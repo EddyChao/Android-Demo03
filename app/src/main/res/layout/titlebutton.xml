@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fen"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button02"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/huang"
+        android:text="点击返回" />
+    <ListView
+        android:id="@+id/mylist"
+
+        android:layout_width="match_parent"
+        android:layout_height="672dp" />
+
+</LinearLayout>
