@@ -1,23 +1,19 @@
 package com.example.demo03.activity;
-import java.util.ArrayList;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabSpec;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTabHost;
 
@@ -33,23 +29,34 @@ public class MainActivity extends FragmentActivity implements OnTabChangeListene
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		tabHost=(FragmentTabHost)super.findViewById(android.R.id.tabhost);
-		tabHost.setup(this,super.getSupportFragmentManager(),R.id.contentLayout);
-		tabHost.getTabWidget().setDividerDrawable(null);
-		tabHost.setOnTabChangedListener(this);
-		initTab();
+		Intent intent = new Intent();
+//		载子Layout
+		ConstraintLayout login =(ConstraintLayout) View.inflate(this, R.layout.login, null);
+//      找到容器
+		FrameLayout loginLayout = (FrameLayout)findViewById(R.id.contentLayout);
+//      加上View 结束
+		loginLayout.addView(login);
+//		tabHost=(FragmentTabHost)super.findViewById(android.R.id.tabhost);
+//		tabHost.setup(this,super.getSupportFragmentManager(),R.id.contentLayout);
+//		tabHost.getTabWidget().setDividerDrawable(null);
+//		tabHost.setOnTabChangedListener(this);
+//		initTab();
 	}
 
 
 
 	
 	private void initTab(){
-		String tabs[]= TabDb.getTabsTxt();
-		for(int i=0;i<tabs.length;i++){
-			TabSpec tabSpec=tabHost.newTabSpec(tabs[i]).setIndicator(getTabView(i));
-			tabHost.addTab(tabSpec,TabDb.getFragments()[i],null);
-			tabHost.setTag(i);
-		}
+		TabSpec tabSpec=tabHost.newTabSpec("登录").setIndicator(getTabView(0));
+		tabHost.addTab(tabSpec,TabDb.getFragments()[0],null);
+		tabHost.setTag(0);
+
+//		String tabs[]= TabDb.getTabsTxt();
+//		for(int i=0;i<tabs.length;i++){
+//			TabSpec tabSpec=tabHost.newTabSpec(tabs[i]).setIndicator(getTabView(i));
+//			tabHost.addTab(tabSpec,TabDb.getFragments()[i],null);
+//			tabHost.setTag(i);
+//		}
 	}
 	
 	private View getTabView(int idx){
